@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <script src="js/live.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<ul class="nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#">Work Experience</a></li>
+    <li><a class="active" href="gallery.html">Gallery</a></li>
+    <li><a href="#">Education</a></li>
+    <li><a href="#">Skills</a></li>
+</ul>
+
+<div class="header" id="home">
+    <img class="profile" src="https://www.academy.profoundleadership.com.au/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2017/09/Martin-Probst-Profile-picture-square-300x300.png.webp"/>
+    <h1>JOHN DOE PORTFOLIO</h1>
+    <h4> 500 Terry Francois Street </br>San Francisco, CA 94158 </h4>
+    <h4>E-mail: info@mysite.com</h4>
+    <h4>Phone: 123-456-7890</h4>
+    <!-- Add font awesome icons -->
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-google"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+</div>
+
+<div class="gallery">
+    <div class="row">
+        <div class="column">
+            <img src="img/1.jpg" alt="Street" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="img/2.jpg" alt="Lamp" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="img/3.jpg" alt="Beach" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="img/4.jpg" alt="Camera" style="width:100%" onclick="myFunction(this);">
+        </div>
+    </div>
+
+    <div class="container-img">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" style="width:100%">
+        <div id="imgtext"></div>
+    </div>
+</div>
+
+<div class="container">
+    <h2> Give me some messages </h2>
+    <form action="/action_page.php">
+    </form>
+    Isi form tersebut dengan komponen-komponen formulir
+    berikut :
+    <div class="row">
+        <div class="col-25">
+            <label for="fname">First Name</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label for="lname">Last Name</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label for="country">Country</label>
+        </div>
+        <div class="col-75">
+            <select id="country" name="country" style="width: 92%">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label for="subject">Subject</label>
+        </div>
+        <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+        </div>
+        <div class="col-75">
+            <input type="submit" value="Submit">
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Author: Hege Refsnes<br>
+        <a href="mailto:hege@example.com">hege@example.com</a>
+    </p>
+</footer>
+
+<script>
+    function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+    }
+</script>
+
+</body>
+</html>
